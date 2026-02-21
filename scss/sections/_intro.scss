@@ -1,0 +1,37 @@
+@use "../custom";
+@use "../components/mixins";
+@use "../components/animations";
+main {
+  margin-top: 76px;
+}
+.intro {
+  min-height: calc(100vh - 76px);
+  h1 {
+    font-family: "Poppins", sans-serif;
+  }
+  .play {
+    &::before,
+    &::after {
+      animation: pulse 1.5s infinite;
+      content: "";
+      position: absolute;
+      width: 5rem;
+      height: 5rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    &::before {
+      animation-delay: 1s;
+    }
+    &::after {
+      animation-delay: 1.5s;
+    }
+    i {
+      font-size: 5rem;
+    }
+  }
+}
+@include animations.pulse;

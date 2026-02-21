@@ -1,0 +1,12 @@
+@use "../custom";
+@use "../components/mixins";
+.services {
+  .border-right {
+    @include custom.media-breakpoint-up(md) {
+      border-right: 1px solid custom.$gray-300;
+    }
+  }
+    img {
+      width: min(22.5rem, 100%);
+    }
+}

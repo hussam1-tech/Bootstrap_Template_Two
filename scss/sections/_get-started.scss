@@ -1,0 +1,11 @@
+@use "../custom";
+@use "../components/mixins";
+.get-started {
+    background-color: custom.$gray-200;
+    .col-12 {
+        textarea {
+            height: 11.25rem;
+            resize: none;
+        }
+    }
+}

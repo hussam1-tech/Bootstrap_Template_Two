@@ -1,0 +1,27 @@
+@use "../custom";
+@use "../components/mixins";
+.testimonials {
+  .line {
+    width: 120px;
+    background-color: #f0d1fa;
+    border-color: #f0d1fa;
+    height: 6px;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+  }
+  .info {
+    max-width: 700px;
+    border-radius: 1rem;
+    background-color: custom.$gray-200;
+  }
+  .text-center {
+      transform: translateY(-50%);
+    img {
+    width: 5rem;
+  }
+  }
+  .btn {
+    --bs-btn-padding-x: 1.05rem;
+    --bs-btn-padding-y: 0.275rem;
+  }
+}

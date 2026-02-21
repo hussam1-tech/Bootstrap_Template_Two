@@ -1,0 +1,75 @@
+@use "../custom";
+@use "../components/mixins";
+footer {
+  background-color: custom.$footer;
+  .footer-header {
+    .icon {
+      img {
+        margin-top: 0.4rem;
+      }
+    }
+    a {
+      &:hover {
+        color: custom.$primary !important;
+      }
+    }
+    span.body {
+      color: custom.$gray-600;
+    }
+  }
+  .footer-social {
+    background-color: #212121;
+    a {
+      &:hover {
+        i {
+          color: custom.$primary !important;
+        }
+      }
+    }
+  }
+  .footer-links {
+    hr {
+      background-color: custom.$gray-400;
+      border-color: custom.$gray-400;
+      width: 60px;
+      height: 2px;
+      @include custom.media-breakpoint-down(md) {
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+    li {
+        a {
+            &:hover {
+                color: custom.$primary !important;
+            }
+        }
+    }
+    .fit {
+      @include custom.media-breakpoint-up(md) {
+        width: fit-content;
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: #000;
+    color: custom.$gray-600;
+    a {
+      color: custom.$white;
+      text-decoration: none;
+      &:hover {
+        color: custom.$primary;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.back-to-top {
+  color: #fff;
+  bottom: 1.875rem;
+  right: 1.875rem;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  display: none;
+}

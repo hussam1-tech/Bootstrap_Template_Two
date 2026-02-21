@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap-training",
+  "version": "1.0.0",
+  "description": "training on both bootstrap and sass",
+  "main": "main.js",
+  "scripts": {
+    "sass": "sass --watch scss:css"
+  },
+  "keywords": [
+    "Bootstrap",
+    "bootstrap-v5",
+    "Sass",
+    "learning bootstrap",
+    "learning sass"
+  ],
+  "author": "Hussam",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "sass": "^1.93.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "^5.3.8",
+    "glightbox": "^3.3.1"
+  }
+}

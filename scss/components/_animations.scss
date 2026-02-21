@@ -1,0 +1,13 @@
+@use "../custom";
+@mixin pulse {
+  @keyframes pulse {
+    0% {
+        opacity: 1;
+        box-shadow: 0 0 0 .6rem custom.$white;
+    }
+    100% {
+        opacity: 0;
+        box-shadow: 0 0 0 1.5rem custom.$white;
+    }
+  }
+}

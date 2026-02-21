@@ -1,0 +1,62 @@
+@use "sass:color";
+@use "../custom";
+@mixin gradient {
+  background-image: linear-gradient(
+    to right,
+    rgba(custom.$purple-dark, 0.95),
+    rgba(custom.$pink, 0.95)
+  );
+}
+@mixin darkBtn {
+  background-color: color.scale(custom.$primary, $lightness: -30%);
+}
+@mixin transition($time: 0.3, $unit: s) {
+  transition: $time + $unit;
+}
+.gradient {
+  @include gradient;
+}
+.text-gradient {
+  @include gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+.btn-special {
+  width: fit-content;
+  border: 1px solid #fff;
+  span {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  &:hover {
+    color: custom.$white;
+    @include gradient;
+    span {
+      @include darkBtn;
+    }
+  }
+}
+.heading-line {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #9926f0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &::before {
+    width: 150px;
+    height: 2px;
+    bottom: -1px;
+  }
+  &::after {
+    width: 30px;
+    height: 8px;
+    bottom: -9px;
+  }
+}
